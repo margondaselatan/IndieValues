@@ -250,7 +250,7 @@ questions = [
         }
     },
 	{
-        "question": "Ssshhhiiittt!!!",
+        "question": "Ssshhhiiittt!",
         "effect": {
             "popl": 2,
             "peri": -8,
