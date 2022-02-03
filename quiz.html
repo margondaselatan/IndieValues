@@ -10,13 +10,13 @@
 <script type="application/javascript"
         src="questions.js">
 </script>
-<h1>The HMI Test</h1>
+<h1>IndieValues</h1>
 <hr>
 <h2 style="text-align:center;" id="question-number">Loading...</h2>
 <p class="question" id="question-text"></p>
 <button class="button stronglyAgree" onclick="next_question( 1.0)">Strongly Like</button> <br>
 <button class="button agree" onclick="next_question( 0.5)">Like</button> <br>
-<button class="button neutral" onclick="next_question( 0.0)">Neutral/Unsure</button> <br>
+<button class="button neutral" onclick="next_question( 0.0)">Neutral/Unsure/Never Heard Them</button> <br>
 <button class="button disagree" onclick="next_question(-0.5)">Dislike</button> <br>
 <button class="button stronglyDisagree" onclick="next_question(-1.0)">Strongly Dislike</button> <br>
 <button class="small_button" onclick="prev_question()" id="back_button">Back</button>
@@ -24,20 +24,33 @@
 
 <!-- JavaScript for the test itself -->
 <script>
-    var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
-    max_econ = max_dipl = max_govt = max_scty = 0;
-    let econ_array = new Array(questions.length);
-    let dipl_array = new Array(questions.length);
-    let govt_array = new Array(questions.length);
-    let scty_array = new Array(questions.length);
+	
+    var max_popl, max_peri, max_comp, max_inov; // Max possible scores
+    max_popl = max_peri = max_comp = max_inov = 0;
+    let popl_array = new Array(questions.length);
+    let peri_array = new Array(questions.length);
+    let comp_array = new Array(questions.length);
+    let inov_array = new Array(questions.length);
     var qn = 0; // Question number
+	shuffleArray(questions);
     init_question();
+	
     for (var i = 0; i < questions.length; i++) {
-        max_econ += Math.abs(questions[i].effect.econ)
-        max_dipl += Math.abs(questions[i].effect.dipl)
-        max_govt += Math.abs(questions[i].effect.govt)
-        max_scty += Math.abs(questions[i].effect.scty)
+        max_popl += Math.abs(questions[i].effect.popl)
+        max_peri += Math.abs(questions[i].effect.peri)
+        max_comp += Math.abs(questions[i].effect.comp)
+        max_inov += Math.abs(questions[i].effect.inov)
     }
+	
+	function shuffleArray(array) {
+		for (var i = array.length - 1; i > 0; i--) {
+			var j = Math.floor(Math.random() * (i + 1));
+			var temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
+		}
+	}
+	
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
         document.getElementById("question-number").innerHTML = "Artist " + (qn + 1) + " of " + (questions.length);
@@ -52,10 +65,10 @@
     }
 
     function next_question(mult) {
-        econ_array[qn] = mult*questions[qn].effect.econ
-        dipl_array[qn] = mult*questions[qn].effect.dipl
-        govt_array[qn] = mult*questions[qn].effect.govt
-        scty_array[qn] = mult*questions[qn].effect.scty
+        popl_array[qn] = mult*questions[qn].effect.popl
+        peri_array[qn] = mult*questions[qn].effect.peri
+        comp_array[qn] = mult*questions[qn].effect.comp
+        inov_array[qn] = mult*questions[qn].effect.inov
         qn++;
         if (qn < questions.length) {
             init_question();
@@ -77,15 +90,15 @@
     }
 
     function results() {
-        let final_econ = econ_array.reduce((a, b) => a + b, 0)
-        let final_dipl = dipl_array.reduce((a, b) => a + b, 0)
-        let final_govt = govt_array.reduce((a, b) => a + b, 0)
-        let final_scty = scty_array.reduce((a, b) => a + b, 0)
+        let final_popl = popl_array.reduce((a, b) => a + b, 0)
+        let final_peri = peri_array.reduce((a, b) => a + b, 0)
+        let final_comp = comp_array.reduce((a, b) => a + b, 0)
+        let final_inov = inov_array.reduce((a, b) => a + b, 0)
         location.href = `results.html`
-            + `?e=${calc_score(final_econ,max_econ)}`
-            + `&d=${calc_score(final_dipl,max_dipl)}`
-            + `&g=${calc_score(final_govt,max_govt)}`
-            + `&s=${calc_score(final_scty,max_scty)}`
+            + `?p=${calc_score(final_popl,max_popl)}`
+            + `&e=${calc_score(final_peri,max_peri)}`
+            + `&c=${calc_score(final_comp,max_comp)}`
+            + `&i=${calc_score(final_inov,max_inov)}`
     }
 </script>
 </body>
