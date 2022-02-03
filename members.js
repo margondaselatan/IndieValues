@@ -38,10 +38,10 @@ members = [
 	{
         "name": "Razita",
         "stats": {
-            "popl": 31.3,
-            "peri": 3.3,
-            "comp": 94.4,
-            "inov": 17.4
+            "popl": 40,
+            "peri": 37,
+            "comp": 61.7,
+            "inov": 45.4
         }
     },
 	{
