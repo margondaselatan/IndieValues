@@ -1,9 +1,9 @@
 members = [
     {
-        "name": "Drepram",
+        "name": "Andre",
         "stats": {
-            "popl": 62.1,
-            "peri": 51.8,
+            "popl": 37.9,
+            "peri": 48.2,
             "comp": 62.4,
             "inov": 50.3
         }
@@ -65,10 +65,10 @@ members = [
 	{
         "name": "Jepri",
         "stats": {
-            "popl": 61.3,
-            "peri": 51.7,
-            "comp": 100,
-            "inov": 31.3
+            "popl": 41,
+            "peri": 49.8,
+            "comp": 68,
+            "inov": 55.7
         }
     },
 ];
