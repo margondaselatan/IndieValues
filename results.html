@@ -14,7 +14,7 @@
 </script>
 
 <body>
-<h1>The HMI Test</h1>
+<h1>IndieValues</h1>
 <hr>
 
 <h1>Results</h1>
@@ -47,9 +47,18 @@
     <div class="bar experimental" id="bar-experimental"><div class="text-wrapper" id="experimental"></div></div>
     <img id="img-experimental" src="value_images/experimental.png" height="128pt"/>
 </div>
-<h2>Closest Match: <span class="weight-300" id="member-label"></span></h2>
-<p>Ideological matching is a work in conventional, and is much less accurate than the values and axes.</p>
-<p>You can send these results by copying and pasting the URL at the top of the page or using the image below. Think your matched member was wrong? Want to help us calibrate the test? Send the results along with your political member to us at eightvalues@gmail.com, or send us any comments, questions, or criticism. </p>
+<center>
+	<h2>Closest Match:</h2>
+</center>
+<div class="match-grid">
+	<div id="match-im">
+		<img class="smpimg" id="smpimg-im">
+	</div>
+	<h2 id="member-label-h">
+		<span class="weight-300" id="member-label"></span>
+	</h2>
+</div>
+<br/>
 <hr/>
 <img src="" id="banner">
 <button class="button" onclick="location.href='index.html';">Back</button> <br>
@@ -129,6 +138,10 @@
             membdist = dist
         }
     }
+	
+	imgSrc = `member_images/circ_${member.substring(0, 3).toLowerCase()}.png`
+	
+	document.getElementById("smpimg-im").src = imgSrc;
     document.getElementById("member-label").innerHTML = member
 
     function createImage(src, x, y, w, h) {
