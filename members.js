@@ -20,10 +20,10 @@ members = [
 	{
         "name": "Indira",
         "stats": {
-            "popl": 33.3,
-            "peri": 8.8,
-            "comp": 65,
-            "inov": 33.3
+            "popl": 38.3,
+            "peri": 39.3,
+            "comp": 67.9,
+            "inov": 48.4
         }
     },
 	{
@@ -47,10 +47,10 @@ members = [
 	{
         "name": "Yiid",
         "stats": {
-            "popl": 63.3,
-            "peri": 0,
-            "comp": 25,
-            "inov": 100
+            "popl": 48.6,
+            "peri": 40.2,
+            "comp": 48.5,
+            "inov": 60.3
         }
     },
 	{
