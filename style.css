@@ -66,6 +66,9 @@ p.question {
     text-align: center;
 
 }
+p.cred {
+	text-align: center;
+}
 h1 {
     color: #222222;
     font-family: 'Montserrat', sans-serif;

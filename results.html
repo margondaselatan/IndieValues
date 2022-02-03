@@ -160,9 +160,9 @@
         ctx.fillStyle = "#EEEEEE"
         ctx.fillRect(0,0,800,650);
 
-        img = document.getElementById("img-mainstream")
-        ctx.drawImage(img, 20, 170, 100, 100);
         img = document.getElementById("img-obscure")
+        ctx.drawImage(img, 20, 170, 100, 100);
+        img = document.getElementById("img-mainstream")
         ctx.drawImage(img, 680, 170, 100, 100)
         img = document.getElementById("img-modern")
         ctx.drawImage(img, 20, 290, 100, 100)
@@ -172,9 +172,9 @@
         ctx.drawImage(img, 20, 410, 100, 100)
         img = document.getElementById("img-rhythm")
         ctx.drawImage(img, 680, 410, 100, 100)
-        img = document.getElementById("img-experimental")
-        ctx.drawImage(img, 20, 530, 100, 100)
         img = document.getElementById("img-conventional")
+        ctx.drawImage(img, 20, 530, 100, 100)
+        img = document.getElementById("img-experimental")
         ctx.drawImage(img, 680, 530, 100, 100)
 
         ctx.fillStyle="#222222"
@@ -206,18 +206,18 @@
         ctx.fillText(member, 20, 140)
 
         ctx.textAlign="left"
-        if (mainstream  > 30) {ctx.fillText(mainstream + "%", 130, 237.5)}
+        if (obscure    > 30) {ctx.fillText(obscure + "%", 130, 237.5)}
         if (modern     > 30) {ctx.fillText(modern + "%", 130, 357.5)}
         if (melody   > 30) {ctx.fillText(melody + "%", 130, 477.5)}
-        if (experimental > 30) {ctx.fillText(experimental + "%", 130, 597.5)}
+		if (conventional  > 30) {ctx.fillText(conventional + "%", 130, 597.5)}
         ctx.textAlign="right"
-        if (obscure    > 30) {ctx.fillText(obscure + "%", 670, 237.5)}
+		if (mainstream  > 30) {ctx.fillText(mainstream + "%", 670, 237.5)}
         if (oldies     > 30) {ctx.fillText(oldies + "%", 670, 357.5)}
         if (rhythm > 30) {ctx.fillText(rhythm + "%", 670, 477.5)}
-        if (conventional  > 30) {ctx.fillText(conventional + "%", 670, 597.5)}
+		if (experimental > 30) {ctx.fillText(experimental + "%", 670, 597.5)}
 
         ctx.font="300 30px Montserrat"
-        ctx.fillText("margondaselatan.github.io/IndieValues", 780, 60)
+        ctx.fillText("s.id/indievalues", 780, 60)
 		ctx.fillText(version, 780, 90)
         ctx.textAlign="center"
         ctx.fillText("Popularity Axis: " + document.getElementById("popularity-label").innerHTML, 400, 175)

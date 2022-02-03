@@ -2,19 +2,19 @@ members = [
     {
         "name": "Drepram",
         "stats": {
-            "popl": 37.9,
-            "peri": 67.9,
-            "comp": 90,
-            "inov": 20.8
+            "popl": 62.1,
+            "peri": 51.8,
+            "comp": 62.4,
+            "inov": 50.3
         }
     },
 	{
         "name": "Deby",
         "stats": {
-            "popl": 15,
-            "peri": 0,
-            "comp": 91.7,
-            "inov": 14.3
+            "popl": 35.9,
+            "peri": 62.7,
+            "comp": 61.1,
+            "inov": 46.7
         }
     },
 	{
@@ -56,10 +56,10 @@ members = [
 	{
         "name": "Faris",
         "stats": {
-            "popl": 52.6,
-            "peri": 84.4,
-            "comp": 100,
-            "inov": 96.6
+            "popl": 57.7,
+            "peri": 63.7,
+            "comp": 56.8,
+            "inov": 57.4
         }
     },
 	{
