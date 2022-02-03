@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Deftone';
+    src: url('font-mname.ttf');
+}
 html {
     background-color: #bbbbbb;
     padding: 0px;
@@ -74,6 +78,24 @@ h2 {
     margin-top: 12pt;
     margin-bottom: 10pt;
 }
+h3 {
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+	text-align: center;
+    font-size: 24pt;
+    line-height: 36pt;
+    margin-top: 12pt;
+    margin-bottom: 10pt;
+}
+h4 {
+    color: #333333;
+    font-family: 'Deftone';
+	text-align: center;
+    font-size: 36pt;
+    line-height: 36pt;
+    margin-top: 12pt;
+    margin-bottom: 10pt;
+}
 li {
     font-size: 16pt;
     text-indent: 16pt;
@@ -102,12 +124,47 @@ img.quadcolumn {
 img.quadcolumn:hover {
     transform: scale(1.05);
   }
+  
+img.mpimg {
+    width: 85%;
+    transition: transform .3s;
+}
+
+a.spimg {
+	margin-left: 1vw;
+	transition: transform .2s;
+}
+
+a.spimg:hover {
+	transform: scale(1.1);
+}
+
+a.lfimg {
+	margin-left: 1vw;
+	transition: transform .2s;
+}
+
+a.lfimg:hover {
+	transform: scale(1.1);
+}
+
+img.spimg {
+    width: 3vw;
+}
+
+img.lfimg {
+    width: 3vw;
+}
+
+img.mpimg:hover {
+    transform: scale(1.05);
+}
 div.quadcolumn {
     width: 23.75%;
 }
 div.axis_name {
     color: #333333;
-    font-size: 19pt;
+    font-size: 16pt;
     font-family: 'Montserrat';
     display: inline-block;
     padding-bottom: 8.65pt;
@@ -225,43 +282,43 @@ div.text-wrapper {
     color: #222222;
     display: inline-block;
 }
-div.equality {
-    background-color: #f44336;
-    text-align: left;
-    border-right-style: solid;
-}
-div.wealth {
-    background-color: #00897b;
-    text-align: right;
-    border-left-style: solid;
-}
-div.liberty {
-    background-color: #ffeb3b;
-    text-align: left;
-    border-right-style: solid;
-}
-div.authority {
-    background-color: #3f51b5;
-    text-align: right;
-    border-left-style: solid;
-}
-div.peace {
-    background-color: #03a9f4;
-    text-align: right;
-    border-left-style: solid;
-}
-div.might {
+div.obscure {
     background-color: #ff9800;
     text-align: left;
     border-right-style: solid;
 }
-div.progress {
+div.mainstream {
+    background-color: #03a9f4;
+    text-align: right;
+    border-left-style: solid;
+}
+div.melody {
+    background-color: #8bc34a;
+    text-align: left;
+    border-right-style: solid;
+}
+div.rhythm {
     background-color: #9c27b0;
     text-align: right;
     border-left-style: solid;
 }
-div.tradition {
-    background-color: #8bc34a;
+div.oldies {
+    background-color: #00897b;
+    text-align: right;
+    border-left-style: solid;
+}
+div.modern {
+    background-color: #f44336;
+    text-align: left;
+    border-right-style: solid;
+}
+div.experimental {
+    background-color: #3f51b5;
+    text-align: right;
+    border-left-style: solid;
+}
+div.conventional {
+    background-color: #ffeb3b;
     text-align: left;
     border-right-style: solid;
 }
@@ -282,4 +339,36 @@ span.weight-300 {
     margin: 8pt;
     margin-left: auto;
     margin-right: auto;
+}
+
+.member-row {
+	margin: 1% auto 1% auto;
+	padding: 2% 2% 2% 2%;
+	border-radius: 15px;
+	background-color: #eeeeee;
+}
+
+.grid-parent {
+	display: grid;
+	grid-template-columns: 25% auto;
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+.pname {
+	display: flex;
+    align-items: center;
+    justify-content: flex-start;
+	grid-area: 1 / 2 / 2 / 3; 
+}
+
+.pdesc { 
+	grid-area: 2 / 2 / 3 / 3; 
+}
+.pimg { 
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	grid-area: 1 / 1 / 3 / 2; 
 }
