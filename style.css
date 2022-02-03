@@ -125,6 +125,12 @@ div.center {
     font-size: 24pt;
     margin: auto;
 }
+.ss-jef-d {
+	text-align: center;
+}
+img#ss-jef {
+	width: 75%;
+}
 img.quadcolumn {
     width: 23.75%;
     transition: transform .3s;
